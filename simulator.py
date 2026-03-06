@@ -30,7 +30,7 @@ from google import genai       # API de Google Generative AI
 # ====================================================================
 
 # Clave API de Google Generative AI (Gemini)
-API_KEY = "AIzaSyCk8JRlRz4cjcgDwXAKwRjUHXXWX7C09J8"
+API_KEY = "YOUR_API_KEY_HERE"  # Reemplaza con tu clave real 
 
 # Cliente API configurado
 CLIENT = genai.Client(api_key=API_KEY)
@@ -60,7 +60,7 @@ MODEL_NAME = "gemini-2.0-flash"
 
 # Número de hilos paralelos para ejecutar simulaciones concurrentes
 # Aumentar para más velocidad (cuidado con rate limits de API)
-# Recomendado: 4-8 según capacidad de máquina
+# Recomendado: 4-8 (Los test se realizarón con 120 hilos, por capacidad de la máquina y para acelerar el proceso, pero se pueden ajustar según necesidades)
 MAX_WORKERS = 5
 
 # Número máximo de turnos en una conversación
@@ -182,7 +182,7 @@ def save_data(record, full_chat_text):
             'tasa_preguntas_abiertas_vendedor': int,
             'tasa_interrupciones_vendedor': int,
             'polaridad_sentimiento_vendedor': float,
-            'resultado_conversacion': str (EXITO/FALLO/NEUTRO)
+            'resultado_conversacion': str (EXITO/FALLO)
         }
     """
     # Usar lock para thread-safe file writing
@@ -412,7 +412,7 @@ def run_simulation(cliente, vendedor, conv_id):
 
 
 # ====================================================================
-# FUNCIÓN PRINCIPAL: ORQUESTAR SIMULACIÓN
+# FUNCIÓN PRINCIPAL: SIMULADOR
 # ====================================================================
 
 def simulator():
