@@ -64,19 +64,13 @@ Resultado:
 ### 1️ Clonar el repositorio
 
 ```bash
-git clone https://github.com/tu-usuario/sales-conversation-strategy-analysis.git
+git clone https://github.com/Nestor-Floreh/sales-conversation-strategy-analysis.git
 cd sales-conversation-strategy-analysis
 ```
 
-### 2 Instalar dependencias
+### 2 Configurar API Key
 
-```bash
-pip install -r requirements.txt
-```
-
-### 3 Configurar API Key
-
-**Opción A: Variables de entorno (recomendado para producción)**
+**Opción A: Variables de entorno**
 
 ```bash
 # Clave API de Google Generative AI (Gemini)
@@ -84,7 +78,7 @@ API_KEY = "YOUR_API_KEY_HERE"  # Reemplaza con tu clave real
 ```
 Modificar la línea 32 del archivo **simulator.py**
 
-### 4 Ejecutar simulaciones
+### 3 Ejecutar simulaciones
 
 ```bash
 python main.py
@@ -111,8 +105,6 @@ sales-conversation-strategy-analysis/
 │   └── results/
 │       └── simulated_conversations_data.csv  # Salida (10,000 filas)
 │
-│
-├── requirements.txt                # Dependencias
 ├── README.md                       # Este archivo
 ```
 
